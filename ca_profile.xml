@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CommunityApplications>
   <Profile>
-    unRaid templates for third-party servers and applications (including OpenRepo package repository server).
+    unRaid templates for third-party servers and applications (including the OpenRepo package repository server and Gitea self-hosted Git service).
   </Profile>
   <Icon>https://avatars.githubusercontent.com/u/4661200?v=4</Icon>
   <WebPage>https://github.com/UberMetroid/unraid-thirdparty</WebPage>
