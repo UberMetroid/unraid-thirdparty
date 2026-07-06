@@ -1,4 +1,4 @@
-# UberMetroid Unraid Thirdparty Repository
+# Unraid Thirdparty Repository
 
 This repository contains templates for third-party tools and platforms packaged for Unraid.
 
