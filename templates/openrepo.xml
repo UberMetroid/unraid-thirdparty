@@ -17,7 +17,7 @@
   <Category>Tools: Backup: Status: Web:</Category>
   <WebUI>http://[IP]:[PORT:7376]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/openrepo.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/openkilt/openrepo/master/web/repo/static/repo/openrepo_logo2.png</Icon>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/openrepo.png</Icon>
   <ExtraParams>--add-host=django:127.0.0.1</ExtraParams>
   <PostArgs>bash -c "run_openrepoweb &amp; /venv/bin/python /app/django/manage.py runworker &amp; nginx"</PostArgs>
   
