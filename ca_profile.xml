@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+    <Icon>https://avatars.githubusercontent.com/u/4661200?v=4</Icon>
+    <Profile>
+        A collection of clean, secure, and minimalist self-hosted utilities built in Rust.
+    </Profile>
+    <GitHub>https://github.com/UberMetroid</GitHub>
+</Maintainer>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>OpenRepo</Name>
+  <Repository>ghcr.io/openkilt/openrepo:latest</Repository>
+  <Registry>https://github.com/openkilt/openrepo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/openkilt/openrepo/issues</Support>
+  <Project>https://github.com/openkilt/openrepo</Project>
+  <Overview>
+    OpenRepo is a web-based repository server designed for managing and hosting package repositories for Debian (.deb), RedHat (.rpm), and generic files. It features user access control, PGP signing key management, packages promotion, a REST API, and a CLI client.
+    
+    This unRaid template runs Nginx, Django, and the background worker in a single self-contained container using SQLite as the default database.
+  </Overview>
+  <Category>Tools: Backup: Status: Web:</Category>
+  <WebUI>http://[IP]:[PORT:7376]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/openrepo.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/openkilt/openrepo/master/web/repo/static/repo/openrepo_logo2.png</Icon>
+  <ExtraParams>--add-host=django:127.0.0.1</ExtraParams>
+  <PostArgs>bash -c "run_openrepoweb &amp; /venv/bin/python /app/django/manage.py runworker &amp; nginx"</PostArgs>
+  
+  <Config Name="Web UI Port" Target="8080" Default="7376" Mode="tcp" Description="Web Interface Port. Access the web dashboard here." Type="Port" Display="always" Required="true" Mask="false">7376</Config>
+  
+  <Config Name="Appdata Directory" Target="/var/lib/openrepo" Default="/mnt/user/appdata/openrepo" Mode="rw" Description="Path to save persistent application data, database (SQLite), keys, and repository packages." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openrepo</Config>
+  
+  <Config Name="Database Type" Target="OPENREPO_DB_TYPE" Default="sqlite" Description="The database engine to use. Choose 'sqlite' for a self-contained installation (recommended for this single container setup) or 'postgresql' to use an external PostgreSQL database." Type="Variable" Display="always" Required="true" Mask="false">sqlite</Config>
+  
+  <Config Name="Django Secret Key" Target="DJANGO_SECRET_KEY" Default="a8b03bc2cfa531bd96d5176d5d38986f594ff96597889d6b0a37cbe35679389a" Description="A secure random string used for Django session signing and CSRF tokens. Leave empty to use fallback or generate one with: openssl rand -hex 64." Type="Variable" Display="always" Required="true" Mask="true">a8b03bc2cfa531bd96d5176d5d38986f594ff96597889d6b0a37cbe35679389a</Config>
+
+  <Config Name="Domain Name" Target="OPENREPO_DOMAIN" Default="localhost:8080" Description="Domain name or host IP:Port where the instance is accessible (e.g. repo.example.com or 192.168.1.100:7376)." Type="Variable" Display="advanced" Required="false" Mask="false">localhost:8080</Config>
+
+  <Config Name="CSRF Trusted Origins" Target="OPENREPO_CSRF_TRUSTED_ORIGINS" Default="" Description="Space-separated list of trusted origins for CSRF security when running behind a reverse proxy (e.g., https://repo.example.com)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+
+  <Config Name="Log Level" Target="OPENREPO_LOGLEVEL" Default="INFO" Description="Loglevel for the Django application (INFO, DEBUG, WARNING, ERROR)." Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+
+  <Config Name="Debug Mode" Target="OPENREPO_DEBUG" Default="FALSE" Description="Set to TRUE to enable Django debug logging and pages (not recommended for production)." Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
+
+  <Config Name="RPM Version Ignore Build Number" Target="RPM_VERSION_IGNORE_BUILD_NUM" Default="false" Description="Set to true if you want to ignore build numbers when managing RPM packages." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
