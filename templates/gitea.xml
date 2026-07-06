@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Gitea</Name>
+  <Repository>gitea/gitea:latest</Repository>
+  <Registry>https://hub.docker.com/r/gitea/gitea</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/go-gitea/gitea/issues</Support>
+  <Project>https://github.com/go-gitea/gitea</Project>
+  <Overview>Gitea is a painless self-hosted Git service. It is a community-managed fork of Gogs, written in Go and licensed under the MIT license. It runs light on resources and includes issue tracking, pull requests, wikis, and integrations.</Overview>
+  <Category>Developer: Tools: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/gitea.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/gitea.png</Icon>
+  
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Gitea Web Interface HTTP port." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  
+  <Config Name="SSH Port" Target="22" Default="2222" Mode="tcp" Description="SSH port for git operations. Unraid host port 22 is usually reserved, so 2222 is recommended." Type="Port" Display="always" Required="true" Mask="false">2222</Config>
+  
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/gitea" Mode="rw" Description="Persistent storage path for configurations, databases, keys, and git repositories." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gitea</Config>
+  
+  <Config Name="User UID" Target="USER_UID" Default="99" Description="UID of the user running Gitea (Unraid default 'nobody' user is 99)." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  
+  <Config Name="User GID" Target="USER_GID" Default="100" Description="GID of the group running Gitea (Unraid default 'users' group is 100)." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
