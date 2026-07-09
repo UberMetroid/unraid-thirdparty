@@ -27,9 +27,9 @@
   
   <Config Name="Database Type" Target="OPENREPO_DB_TYPE" Default="sqlite" Description="The database engine to use. Choose 'sqlite' for a self-contained installation (recommended for this single container setup) or 'postgresql' to use an external PostgreSQL database." Type="Variable" Display="always" Required="true" Mask="false">sqlite</Config>
   
-  <Config Name="Django Secret Key" Target="DJANGO_SECRET_KEY" Default="a8b03bc2cfa531bd96d5176d5d38986f594ff96597889d6b0a37cbe35679389a" Description="A secure random string used for Django session signing and CSRF tokens. Leave empty to use fallback or generate one with: openssl rand -hex 64." Type="Variable" Display="always" Required="true" Mask="true">a8b03bc2cfa531bd96d5176d5d38986f594ff96597889d6b0a37cbe35679389a</Config>
+  <Config Name="Django Secret Key" Target="DJANGO_SECRET_KEY" Default="" Description="REQUIRED: generate a unique secret per install (openssl rand -hex 64). Do not reuse a published/default value — it signs sessions and CSRF tokens." Type="Variable" Display="always" Required="true" Mask="true"></Config>
 
-  <Config Name="Domain Name" Target="OPENREPO_DOMAIN" Default="localhost:8080" Description="Domain name or host IP:Port where the instance is accessible (e.g. repo.example.com or 192.168.1.100:7376)." Type="Variable" Display="advanced" Required="false" Mask="false">localhost:8080</Config>
+  <Config Name="Domain Name" Target="OPENREPO_DOMAIN" Default="localhost:7376" Description="Domain name or host IP:Port where the instance is accessible (e.g. repo.example.com or 192.168.1.100:7376). Must match the published Web UI port." Type="Variable" Display="advanced" Required="false" Mask="false">localhost:7376</Config>
 
   <Config Name="CSRF Trusted Origins" Target="OPENREPO_CSRF_TRUSTED_ORIGINS" Default="" Description="Space-separated list of trusted origins for CSRF security when running behind a reverse proxy (e.g., https://repo.example.com)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
 
