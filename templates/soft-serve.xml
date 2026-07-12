@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>soft-serve</Name>
+  <Repository>charmcli/soft-serve:latest</Repository>
+  <Registry>https://hub.docker.com/r/charmbracelet/soft-serve</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/charmbracelet/soft-serve/issues</Support>
+  <Project>https://github.com/charmbracelet/soft-serve</Project>
+  <Overview>Soft Serve is a self-hosted, user-configurable Git server for the command line. It serves your repositories over SSH and displays a beautiful terminal user interface (TUI) when you log in. Note: This is a third-party community template and is not an official XML file from the application developers.</Overview>
+  <Category>Developer: Tools: Web:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/soft-serve.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/soft-serve.png</Icon>
+
+  <!-- SSH Port for Git TUI and operations -->
+  <Config Name="SSH Port" Target="23231" Default="23231" Mode="tcp" Description="SSH Port to access the terminal user interface (TUI) and run git operations." Type="Port" Display="always" Required="true" Mask="false">23231</Config>
+
+  <!-- HTTP Port for HTTP clone and webhooks -->
+  <Config Name="HTTP Port" Target="23232" Default="23232" Mode="tcp" Description="HTTP Port used for HTTP-based git cloning and webhooks." Type="Port" Display="always" Required="true" Mask="false">23232</Config>
+
+  <!-- Persistent Data Directory -->
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/soft-serve" Mode="rw" Description="Path to store repositories, keys, and server configurations." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/soft-serve</Config>
+</Container>
