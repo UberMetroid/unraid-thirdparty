@@ -13,6 +13,8 @@
     OpenRepo is a web-based repository server designed for managing and hosting package repositories for Debian (.deb), RedHat (.rpm), and generic files. It features user access control, PGP signing key management, packages promotion, a REST API, and a CLI client.
     
     This unRaid template runs Nginx, Django, and the background worker in a single self-contained container using SQLite as the default database.
+
+    [Note: This is a community-maintained template and is not officially affiliated with OpenRepo.]
   </Overview>
   <Category>Tools: Backup: Status: Web:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
