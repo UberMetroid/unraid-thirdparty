@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/go-gitea/gitea/issues</Support>
   <Project>https://github.com/go-gitea/gitea</Project>
-  <Overview>Gitea is a painless self-hosted Git service. It is a community-managed fork of Gogs, written in Go and licensed under the MIT license. It runs light on resources and includes issue tracking, pull requests, wikis, and integrations. [Note: This is a third-party community template and is not an official XML file from the application developers.]</Overview>
+  <Overview>Gitea is a painless self-hosted Git service. It is a community-managed fork of Gogs, written in Go and licensed under the MIT license. It runs light on resources and includes issue tracking, pull requests, wikis, and integrations. Note: This is a third-party community template and is not an official XML file from the application developers.</Overview>
   <Category>Developer: Tools: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/gitea.xml</TemplateURL>
