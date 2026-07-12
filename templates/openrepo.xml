@@ -21,7 +21,7 @@
   <ExtraParams>--add-host=django:127.0.0.1</ExtraParams>
   <PostArgs>bash -c "run_openrepoweb &amp; /venv/bin/python /app/django/manage.py runworker &amp; nginx"</PostArgs>
   
-  <Config Name="Web UI Port" Target="8080" Default="7376" Mode="tcp" Description="Web Interface Port. Access the web dashboard here." Type="Port" Display="always" Required="true" Mask="false">7376</Config>
+  <Config Name="Web UI Port" Target="8080" Default="8080" Mode="tcp" Description="Web Interface Port. Access the web dashboard here." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   
   <Config Name="Appdata Directory" Target="/var/lib/openrepo" Default="/mnt/user/appdata/openrepo" Mode="rw" Description="Path to save persistent application data, database (SQLite), keys, and repository packages." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openrepo</Config>
   
@@ -29,7 +29,7 @@
   
   <Config Name="Django Secret Key" Target="DJANGO_SECRET_KEY" Default="" Description="REQUIRED: generate a unique secret per install (openssl rand -hex 64). Do not reuse a published/default value — it signs sessions and CSRF tokens." Type="Variable" Display="always" Required="true" Mask="true"></Config>
 
-  <Config Name="Domain Name" Target="OPENREPO_DOMAIN" Default="localhost:7376" Description="Domain name or host IP:Port where the instance is accessible (e.g. repo.example.com or 192.168.1.100:7376). Must match the published Web UI port." Type="Variable" Display="advanced" Required="false" Mask="false">localhost:7376</Config>
+  <Config Name="Domain Name" Target="OPENREPO_DOMAIN" Default="localhost:8080" Description="Domain name or host IP:Port where the instance is accessible (e.g. repo.example.com or 192.168.1.100:8080). Must match the published Web UI port." Type="Variable" Display="advanced" Required="false" Mask="false">localhost:8080</Config>
 
   <Config Name="CSRF Trusted Origins" Target="OPENREPO_CSRF_TRUSTED_ORIGINS" Default="" Description="Space-separated list of trusted origins for CSRF security when running behind a reverse proxy (e.g., https://repo.example.com)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
 
