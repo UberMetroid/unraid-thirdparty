@@ -23,10 +23,10 @@ Once added, the applications below will appear in your Community Applications se
 
 ## 📦 Available Templates
 
-| Application | Description | Category | Default Ports (Host / Container) | Default Storage Path | Template XML |
+| Application | Description | Category | Port Mapping (Host:Container) | Default Storage Path | Template XML |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **[OpenRepo](https://github.com/openkilt/openrepo)** | A lightweight package repository server hosting Debian (`.deb`), RedHat (`.rpm`), and generic files. Consolidates Nginx, Django, and Celery. | Tools, Backup, Web | `7376` / `8080` (Web UI) | `/mnt/user/appdata/openrepo` | [openrepo.xml](templates/openrepo.xml) |
-| **[Gitea](https://github.com/go-gitea/gitea)** | A painless self-hosted Git service written in Go. A lightweight, resource-friendly community fork of Gogs. | Developer, Productivity | `3000` / `3000` (Web UI)<br>`2222` / `22` (SSH) | `/mnt/user/appdata/gitea` | [gitea.xml](templates/gitea.xml) |
+| **[OpenRepo](https://github.com/openkilt/openrepo)** | A lightweight package repository server hosting Debian (`.deb`), RedHat (`.rpm`), and generic files. Consolidates Nginx, Django, and Celery. | Tools, Backup, Web | `7376:8080` (Web UI) | `/mnt/user/appdata/openrepo` | [openrepo.xml](templates/openrepo.xml) |
+| **[Gitea](https://github.com/go-gitea/gitea)** | A painless self-hosted Git service written in Go. A lightweight, resource-friendly community fork of Gogs. | Developer, Productivity | `3000:3000` (Web UI)<br>`2222:22` (SSH) | `/mnt/user/appdata/gitea` | [gitea.xml](templates/gitea.xml) |
 
 ---
 
