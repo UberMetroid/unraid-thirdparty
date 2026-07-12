@@ -9,13 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/openkilt/openrepo/issues</Support>
   <Project>https://github.com/openkilt/openrepo</Project>
-  <Overview>
-    OpenRepo is a web-based repository server designed for managing and hosting package repositories for Debian (.deb), RedHat (.rpm), and generic files. It features user access control, PGP signing key management, packages promotion, a REST API, and a CLI client.
-    
-    This unRaid template runs Nginx, Django, and the background worker in a single self-contained container using SQLite as the default database.
-
-    [Note: This is a third-party community template and is not an official XML file from the application developers.]
-  </Overview>
+  <Overview>OpenRepo is a web-based repository server designed for managing and hosting package repositories for Debian (.deb), RedHat (.rpm), and generic files. It features user access control, PGP signing key management, packages promotion, a REST API, and a CLI client. This unRaid template runs Nginx, Django, and the background worker in a single self-contained container using SQLite as the default database. [Note: This is a third-party community template and is not an official XML file from the application developers.]</Overview>
   <Category>Tools: Backup: Status: Web:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/openrepo.xml</TemplateURL>
