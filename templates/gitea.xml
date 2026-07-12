@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>Gitea</Name>
-  <Repository>gitea/gitea:latest</Repository>
-  <Registry>https://hub.docker.com/r/gitea/gitea</Registry>
+  <Repository>ghcr.io/go-gitea/gitea:latest</Repository>
+  <Registry>https://github.com/go-gitea/gitea</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
@@ -10,7 +10,7 @@
   <Support>https://github.com/go-gitea/gitea/issues</Support>
   <Project>https://github.com/go-gitea/gitea</Project>
   <Overview>Gitea is a painless self-hosted Git service. It is a community-managed fork of Gogs, written in Go and licensed under the MIT license. It runs light on resources and includes issue tracking, pull requests, wikis, and integrations. Note: This is a third-party community template and is not an official XML file from the application developers.</Overview>
-  <Category>Developer: Tools: Productivity:</Category>
+  <Category>Development: Tools: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/gitea.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/gitea.png</Icon>

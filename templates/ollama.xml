@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>Ollama</Name>
-  <Repository>ollama/ollama:latest</Repository>
-  <Registry>https://hub.docker.com/r/ollama/ollama</Registry>
+  <Repository>docker.io/ollama/ollama:latest</Repository>
+  <Registry>https://github.com/ollama/ollama</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
@@ -10,7 +10,7 @@
   <Support>https://github.com/ollama/ollama/issues</Support>
   <Project>https://ollama.com/</Project>
   <Overview>Ollama allows you to run open-source large language models (like Llama 3, Mistral, and more) locally. This template is configured with Nvidia GPU passthrough support for single or dual/multiple GPUs. Requires the NVIDIA Driver Plugin installed on your Unraid host. Note: This is a third-party community template and is not an official XML file from the application developers.</Overview>
-  <Category>Tools: Developer: AI:</Category>
+  <Category>Tools: Development: AI:</Category>
   <WebUI>http://[IP]:[PORT:11434]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/ollama.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/ollama-red-eyes.png</Icon>

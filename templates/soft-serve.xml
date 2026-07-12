@@ -10,7 +10,7 @@
   <Support>https://github.com/charmbracelet/soft-serve/issues</Support>
   <Project>https://github.com/charmbracelet/soft-serve</Project>
   <Overview>Soft Serve is a self-hosted, user-configurable Git server for the command line. It serves your repositories over SSH and displays a beautiful terminal user interface (TUI) when you log in. Note: This is a third-party community template and is not an official XML file from the application developers.</Overview>
-  <Category>Developer: Tools: Web:</Category>
+  <Category>Development: Tools: Web:</Category>
   <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/soft-serve.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/soft-serve.png</Icon>
 
