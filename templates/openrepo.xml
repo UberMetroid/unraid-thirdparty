@@ -39,13 +39,4 @@
 
   <Config Name="RPM Version Ignore Build Number" Target="RPM_VERSION_IGNORE_BUILD_NUM" Default="false" Description="Set to true if you want to ignore build numbers when managing RPM packages." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
 
-  <Config Name="Database Host" Target="OPENREPO_PG_HOSTNAME" Default="" Description="The hostname or IP of the external PostgreSQL database server (required if Database Type is set to postgresql)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
-
-  <Config Name="Database Port" Target="OPENREPO_PG_PORT" Default="5432" Description="The port of the external PostgreSQL database server." Type="Variable" Display="advanced" Required="false" Mask="false">5432</Config>
-
-  <Config Name="Database Name" Target="OPENREPO_PG_DATABASE" Default="openrepo" Description="The name of the database on the PostgreSQL server." Type="Variable" Display="advanced" Required="false" Mask="false">openrepo</Config>
-
-  <Config Name="Database Username" Target="OPENREPO_PG_USERNAME" Default="postgres" Description="The username to connect to the PostgreSQL server." Type="Variable" Display="advanced" Required="false" Mask="false">postgres</Config>
-
-  <Config Name="Database Password" Target="OPENREPO_PG_PASSWORD" Default="" Description="The password to connect to the PostgreSQL server." Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
 </Container>
