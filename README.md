@@ -27,6 +27,8 @@ Once added, the applications below will appear in your Community Applications se
 | :--- | :--- | :--- |
 | **[OpenRepo](templates/openrepo.xml)** | Package repository hosting server for Debian, RPM, and generic files. ([GitHub](https://github.com/openkilt/openrepo)) | Web UI: `8080:8080`<br>Storage: `/mnt/user/appdata/openrepo` |
 | **[Gitea](templates/gitea.xml)** | A painless self-hosted Git service written in Go. ([GitHub](https://github.com/go-gitea/gitea)) | Web UI: `3000:3000`<br>SSH: `2222:22`<br>Storage: `/mnt/user/appdata/gitea` |
+| **[Ollama](templates/ollama.xml)** | Run open-source large language models locally. ([GitHub](https://github.com/ollama/ollama)) | API Port: `11434:11434`<br>Storage: `/mnt/user/appdata/ollama` |
+
 
 ---
 

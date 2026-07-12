@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Ollama</Name>
+  <Repository>ollama/ollama:latest</Repository>
+  <Registry>https://hub.docker.com/r/ollama/ollama</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ollama/ollama/issues</Support>
+  <Project>https://ollama.com/</Project>
+  <Overview>
+    Ollama allows you to run open-source large language models (like Llama 3, Mistral, and more) locally.
+    This template is configured with Nvidia GPU passthrough support for single or dual/multiple GPUs.
+    Requires the NVIDIA Driver Plugin installed on your Unraid host.
+  </Overview>
+  <Category>Tools: Developer: AI:</Category>
+  <WebUI>http://[IP]:[PORT:11434]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/templates/ollama.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/UberMetroid/unraid-thirdparty/main/icons/ollama.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+
+  <Config Name="Ollama API Port" Target="11434" Default="11434" Mode="tcp" Description="Port that the Ollama API server listens on." Type="Port" Display="always" Required="true" Mask="false">11434</Config>
+
+  <Config Name="Ollama Models Path" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="Path to store downloaded models and configurations." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ollama</Config>
+
+  <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Description="The GPU UUIDs or 'all' to expose to Ollama. For dual GPUs, keeping 'all' lets Ollama leverage both automatically. Otherwise, specify a comma-separated list of GPU UUIDs." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
+
+  <Config Name="Nvidia Driver Capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Description="GPU driver capabilities exposed to the container (keep 'all' or 'compute,utility')." Type="Variable" Display="advanced" Required="true" Mask="false">all</Config>
+</Container>
