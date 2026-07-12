@@ -31,4 +31,8 @@
   <Config Name="Ollama Max Loaded Models" Target="OLLAMA_MAX_LOADED_MODELS" Default="1" Description="Maximum number of different models loaded in VRAM simultaneously." Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
 
   <Config Name="Ollama Context Length" Target="OLLAMA_CONTEXT_LENGTH" Default="4096" Description="Sets the default context window (memory size) for all models if not explicitly set by the model file." Type="Variable" Display="advanced" Required="false" Mask="false">4096</Config>
+
+  <Config Name="Ollama Origins" Target="OLLAMA_ORIGINS" Default="*" Description="CORS origins configuration. Use '*' (default) to allow access from any domain or external client (like Open WebUI running in another container or on the LAN). Leaving it blank restricts access to localhost." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
+
+  <Config Name="Ollama Flash Attention" Target="OLLAMA_FLASH_ATTENTION" Default="1" Description="Enables Flash Attention for faster generation and lower VRAM usage. Requires '1' (default) to enable, or '0' to disable. Flash Attention works best on RTX 30xx/40xx and newer Nvidia GPUs (Ampere architecture or newer)." Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
 </Container>
