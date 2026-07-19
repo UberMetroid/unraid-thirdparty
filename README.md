@@ -4,7 +4,7 @@ This repository hosts community-maintained Docker XML templates for third-party 
 
 ---
 
-## 🚀 How to Add This Repository to Unraid
+## How to Add This Repository to Unraid
 
 To use these templates on your Unraid server:
 
@@ -21,19 +21,18 @@ Once added, the applications below will appear in your Community Applications se
 
 ---
 
-## 📦 Available Templates
+## Available Templates
 
 | Application | Description & Upstream | Default Configuration |
 | :--- | :--- | :--- |
 | **[OpenRepo](templates/openrepo.xml)** | Package repository hosting server for Debian, RPM, and generic files. ([GitHub](https://github.com/openkilt/openrepo)) | Web UI: `8080:8080`<br>Storage: `/mnt/user/appdata/openrepo` |
 | **[Gitea](templates/gitea.xml)** | A painless self-hosted Git service written in Go. ([GitHub](https://github.com/go-gitea/gitea)) | Web UI: `3000:3000`<br>SSH: `2222:22`<br>Storage: `/mnt/user/appdata/gitea` |
-| **[Soft Serve](templates/soft-serve.xml)** | Self-hosted, user-configurable Git server for the command line. ([GitHub](https://github.com/charmbracelet/soft-serve)) | SSH Port: `23231:23231`<br>Storage: `/mnt/user/appdata/soft-serve` |
 | **[StateSync](templates/statesync.xml)** | Real-time event-driven playstate sync bridge between Emby and Jellyfin servers. ([GitHub](https://github.com/UberMetroid/statesync)) | Web UI: `8754:8754`<br>Storage: `/mnt/user/appdata/statesync` |
 
 
 ---
 
-## 🤝 Support & Contributions
+## Support & Contributions
 
 If you encounter issues or want to submit updates to these templates, please open an issue or pull request.
 
@@ -42,6 +41,6 @@ If you encounter issues or want to submit updates to these templates, please ope
 
 ---
 
-## 📄 License
+## License
 
 This repository is licensed under the [MIT License](LICENSE).
